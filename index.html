@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<title>Calculator</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <form name="Calculator">
+    <div>
+  <input tpye="text"  name="result" value=""></input>
+  <br>
+  <input type="button" value="1" onclick="document.Calculator.result.value +='1'" calss="btn"></input>
+  <input type="button" value="2" onclick="document.Calculator.result.value +='2'" calss="btn"></input>
+  <input type="button" value="3" onclick="document.Calculator.result.value +='3'" calss="btn"></input>
+  <input type="button" value="C" onclick="btnclr()" calss="btn"></input>
+  <input type="button" value="X" onclick="btndlt(") calss="btn"></input>
+
+
+  <br>
+  <input type="button" value="4" onclick="document.Calculator.result.value +='4'" calss="btn"></input>
+  <input type="button" value="5" onclick="document.Calculator.result.value +='5'" calss="btn"></input>
+  <input type="button" value="6" onclick="document.Calculator.result.value +='6'" calss="btn"></input>
+  <input type="button" value="/" onclick="btndiv()" calss="btn"></input>
+  <input type="button" value="-" onclick="btnsub()" calss="btn"></input>
+
+
+  <br>
+  <input type="button" value="7" onclick="document.Calculator.result.value +='7'" calss="btn"></input>
+  <input type="button" value="8" onclick="document.Calculator.result.value +='8'" calss="btn"></input>
+  <input type="button" value="9" onclick="document.Calculator.result.value +='9'" calss="btn"></input>
+  <input type="button" value="*" onclick="btnmult()" calss="btn"></input>
+  <input type="button" value="+" onclick="btnsum()" calss="btn"></input>
+  <br>
+  <input type="button" value="0" onclick="document.Calculator.result.value +='0'" calss="btn"></input>
+  <input type="button" value="." onclick="document.Calculator.result.value +='.'" calss="btn"></input>
+  <input type="button" value="(" onclick="document.Calculator.result.value +='('"  calss="btn"></input>
+  <input type="button" value=")" onclick="document.Calculator.result.value +=')'" calss="btn"></input>
+  <input type="button" value="=" onclick="document.Calculator.result.value = eval(document.Calculator.result.value)" calss="btn"></input>
+</div>
+</form>
+
+
+
+
+<script>
+function btnsum(){
+  document.Calculator.result.value +='+';
+}
+
+function btnsub(){
+  document.Calculator.result.value +='-';
+}
+
+function btnmult(){
+  document.Calculator.result.value +='*';
+}
+
+function btndiv(){
+  document.Calculator.result.value +='/';
+}
+
+function btnclr(){
+  document.Calculator.result.value = "";
+}
+function btndlt(){
+var len =  document.Calculator.result.value.length();
+document.Calculator.result.value[len-1]="";
+
+}
+</script>
+<!-- <script src="jquery-3.1.1.min.js"></script>
+<script src="script.js"></script> -->
+</body>
+</html>
